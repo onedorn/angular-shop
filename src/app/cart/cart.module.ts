@@ -13,7 +13,8 @@ import {SharedModule} from "../shared/shared.module";
     CommonModule,
     SharedModule,
   ],
-  entryComponents: [CartListComponent],
+  // https://next.angular.io/api/core/Component#entryComponents
+  // entryComponents: [CartListComponent],
   exports: [CartButtonComponent],
 })
 export class CartModule { }

@@ -4,6 +4,7 @@
   <mat-card-content class="info">
     <div>{{ product.description }}</div>
     <div class="price">Price: {{ product.price }}</div>
+    <!-- обычно такой подход используется, если внутри несколько элементов -->
     <ng-container *ngIf="product.isAvailable; else notAvailable">
       <span class="status status_available">Available</span>
     </ng-container>

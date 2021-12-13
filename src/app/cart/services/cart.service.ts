@@ -36,6 +36,7 @@ export class CartService {
   }
 
   addProduct(product: Product): void {
+    // мутация
     this.cartList.push(product);
   }
 
@@ -49,10 +50,14 @@ export class CartService {
 
   deleteProduct(product: Product): void {
     const index = this.cartList.indexOf(product);
+    // мутация
     this.cartList.splice(index, 1);
   }
 
   cleanCart(): void {
-    this.cartList = [];
+    // НЕ мутация
+    // this.cartList = [];
+    // мутация
+    this.cartList.length = 0;
   }
 }

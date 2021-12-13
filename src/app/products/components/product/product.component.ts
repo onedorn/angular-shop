@@ -8,8 +8,9 @@ import { CartService } from '../../../cart/services/cart.service';
   styleUrls: ['./product.component.less']
 })
 export class ProductComponent implements OnInit {
-  @Input() public product: IProduct;
+  @Input() product: IProduct;
 
+  // не стоит тут внедрять зависимость
   constructor(
     private cartService: CartService
   ) { }
