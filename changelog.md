@@ -15,7 +15,13 @@
 - Create toolbar with cart indicator.
 
 ### Changed
-
 ### Removed
-
 ### Fixed
+
+## [Task2-Components] - 2021-12-10
+###Added
+- Added functionality for quantity and price calculation
+- Added hover directive for items in cart
+- 
+### Changed
+- Refactored project structure(shared,core, feature modules)
