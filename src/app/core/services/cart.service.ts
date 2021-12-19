@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 
 import { Product } from '../../modules/products/models/product';
+import { CoreModule } from '../core.module';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: CoreModule
 })
 export class CartService {
   private cartList: Product[] = [];
@@ -34,7 +35,9 @@ export class CartService {
 
   getCartTotal(): number {
     let total = 0;
+
     this.cartList.forEach(product => total += product.price * product.quantity);
+
     return total;
   }
 

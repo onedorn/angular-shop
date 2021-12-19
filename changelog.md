@@ -18,10 +18,17 @@
 ### Removed
 ### Fixed
 
-## [Task2-Components] - 2021-12-10
+## [Task2-Components] - 2021-12-15
 ###Added
 - Added functionality for quantity and price calculation
 - Added hover directive for items in cart
 - 
 ### Changed
 - Refactored project structure(shared,core, feature modules)
+
+
+## [Task3-Services] - 2021-12-20
+###Added
+- Added app-routing module
+- Added some demo-services to core module
+- Added demo-services presentation to contact-us page

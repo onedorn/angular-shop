@@ -1,14 +1,17 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.less']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit, AfterViewChecked {
   @ViewChild('appTitle') appTitle: ElementRef;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) {}
 
   ngOnInit() {
     console.log('ngOnInit: ' + this.appTitle?.nativeElement.innerHTML);
@@ -20,5 +23,13 @@ export class HeaderComponent implements OnInit {
 
   ngAfterViewChecked() {
     console.log('After viewChecked: ' + this.appTitle.nativeElement.innerHTML);
+  }
+
+  navigateHome(): void {
+    this.router.navigate(['/']);
+  }
+
+  navigateToContacts(): void {
+    this.router.navigate(['/contact-us']);
   }
 }
