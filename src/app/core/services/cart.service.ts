@@ -15,6 +15,7 @@ export class CartService {
     return this.cartList;
   }
 
+  // интересное название метода
   getCartLength(): number {
     return this.cartList.map((product) => product.quantity)
       .reduce((a, b) => a + b, 0);
