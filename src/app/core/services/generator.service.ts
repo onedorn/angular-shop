@@ -2,6 +2,7 @@ import { InjectionToken } from '@angular/core';
 
 export const GeneratorService = new InjectionToken<string>('GeneratorService');
 
+// тут хотелось немного другой подход реализовать
 export function GeneratorFactory(n: number) {
   return function(): string {
     let result = '';
